@@ -76,3 +76,77 @@ footer {
     font-size: 1rem;
     font-weight: bold;
 }
+
+
+
+/* Página PORTAFOLIO */
+.portfolio {
+    padding: 2rem;
+    text-align: center;
+}
+
+.grid-portafolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.trabajo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.trabajo p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.trabajo a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+.trabajo img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Página CONTACTO */
+.contacto {
+    text-align: center;
+    padding: 2rem;
+}
+
+.contacto-lista {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.contacto-lista li {
+    margin-bottom: 1.5rem;
+}
+
+.contacto-lista a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.contacto-lista a:hover {
+    color: #1db954;
+}
+
+.contacto-lista img {
+    width: 24px;
+    height: 24px;
+}
