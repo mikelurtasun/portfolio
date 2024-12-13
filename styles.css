@@ -1,0 +1,78 @@
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    background: #1f1f1f;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #1f1f1f;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.intro {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    object-fit: cover;
+}
+
+.ultimos-trabajos {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.trabajos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.trabajo img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.trabajo p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
