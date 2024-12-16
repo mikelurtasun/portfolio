@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Trabajo - Mikel Urtasun</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const trabajo = params.get("trabajo");
+            const trabajos = {
+                "eguzkilore": {
+                    titulo: "Eguzkilore",
+                    descripcion: "Diseño inspirado en el Eguzkilore, símbolo de protección en la cultura vasca.",
+                    imagenes: [
+                        "assets/eguzkilore_01.jpeg",
+                        "assets/eguzkilore_02.jpeg",
+                        "assets/eguzkilore_03.jpeg",
+                        "assets/eguzkilore_04.jpeg"
+                    ]
+                },
+                "hibaika": {
+                    titulo: "Hibaika",
+                    descripcion: "Diseño para el equipo de remo Hibaika, reflejando tradición y pasión deportiva.",
+                    imagenes: [
+                        "assets/hibaika_01.jpeg",
+                        "assets/hibaika_02.jpeg",
+                        "assets/hibaika_03.jpeg",
+                        "assets/hibaika_04.jpeg"
+                    ]
+                },
+                "boda_javi_e_ines": {
+                    titulo: "Boda Javi e Inés",
+                    descripcion: "Diseño personalizado para la boda de Javi e Inés, elegante y exclusivo.",
+                    imagenes: [
+                        "assets/boda_javi_e_ines_01.jpeg",
+                        "assets/boda_javi_e_ines_02.jpeg",
+                        "assets/boda_javi_e_ines_03.jpeg",
+                        "assets/boda_javi_e_ines_04.jpeg"
+                    ]
+                }
+                // Agregar aquí más trabajos
+            };
+
+            if (trabajo && trabajos[trabajo]) {
+                document.querySelector(".detalle-trabajo h1").innerText = trabajos[trabajo].titulo;
+                document.querySelector(".descripcion").innerText = trabajos[trabajo].descripcion;
+                const galeria = document.querySelector(".galeria");
+                trabajos[trabajo].imagenes.forEach(imgSrc => {
+                    const img = document.createElement("img");
+                    img.src = imgSrc;
+                    img.alt = trabajos[trabajo].titulo;
+                    galeria.appendChild(img);
+                });
+            } else {
+                document.querySelector(".detalle-trabajo").innerHTML = "<p>Trabajo no encontrado</p>";
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="portafolio.html">PORTAFOLIO</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="detalle-trabajo">
+            <h1></h1>
+            <p class="descripcion"></p>
+            <div class="galeria"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Mikel Urtasun</p>
+    </footer>
+</body>
+</html>

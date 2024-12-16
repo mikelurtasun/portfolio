@@ -154,3 +154,37 @@ footer {
     width: 24px;
     height: 24px;
 }
+
+.detalle-trabajo {
+    text-align: center;
+    padding: 2rem;
+}
+
+.detalle-trabajo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.detalle-trabajo .descripcion {
+    font-size: 1.2rem;
+    color: #d0d0d0;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.galeria img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
